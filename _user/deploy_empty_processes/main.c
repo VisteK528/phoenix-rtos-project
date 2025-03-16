@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <sys/max_children.h>
 
 int main(int argc, char ** argv){
     if(argc != 2){
@@ -13,7 +12,7 @@ int main(int argc, char ** argv){
 
     for(int i = 0; i < numberOfChildren; ++i){
         if(fork() == 0){
-            sleep(5);
+            sleep(10);
             exit(0);
         }
     }

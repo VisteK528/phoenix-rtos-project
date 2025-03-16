@@ -22,11 +22,7 @@ int main(int argc, char ** argv){
 
     findProcsNChildren(&my_list, N);
     for(int i = 0; i < my_list.numberOfProcesses; ++i){
-        printf("Process %d has the largest number of children %d. \n", (int)my_list.pids[i], my_list.numberOfChildren[i]);
+        printf("Process %d has %d children which is greater than %d. \n", (int)my_list.pids[i], my_list.numberOfChildren[i], N);
     }
     return 0;
-
-    
-
-
 }

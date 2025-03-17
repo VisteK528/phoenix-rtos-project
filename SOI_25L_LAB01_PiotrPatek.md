@@ -179,6 +179,10 @@ int main(int argc, char ** argv){
     for(int i = 0; i < my_list.numberOfProcesses; ++i){
         printf("Process %d has %d children which is greater than %d. \n", (int)my_list.pids[i], my_list.numberOfChildren[i], N);
     }
+
+    free(my_list.pids);
+    free(my_list.numberOfChildren);
+
     return 0;
 }
 ```
